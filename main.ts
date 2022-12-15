@@ -12,7 +12,8 @@ queue.container.push('able was');
 queue.container.push('ere');
 queue.container.push('saw elba');
 
-for (let i = 0; i < queue.size(); i++) {
+let checkTimes = queue.size()
+for (let i = 0; i < checkTimes; i++) {
     if (stack.pop() == queue.dequeue()) {
         console.log('Reflection') 
     }
