@@ -11,15 +11,22 @@ queue.enqueue(words)
 
 let checktimes = stack.size()
 let counts = 0
+let result = true;
 while(counts < checktimes) {
     if (stack.pop() !== queue.dequeue()) {
-        console.log('No Reflection')
-        break;
+        result = false
     }
     else {
-        console.log('Reflection')
+        result = true
     }
     counts++
+}
+
+if (result) {
+    console.log('Reflection')
+}
+else {
+    console.log('No Reflection')
 }
 
 
