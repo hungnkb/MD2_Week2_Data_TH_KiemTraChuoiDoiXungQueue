@@ -5,8 +5,8 @@ export class Stack<T> {
 
     }
 
-    push(data: T): void {
-        this.container.push(data)
+    push(data: any): void {
+        this.container.push(...data.split(''))
     }
 
     pop(): T | undefined{

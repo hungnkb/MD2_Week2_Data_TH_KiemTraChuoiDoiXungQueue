@@ -5,8 +5,8 @@ export class Queue<T> {
         
     }
 
-    enqueue(data: T): void {
-        this.container.push(data);
+    enqueue(data: any): void {
+        this.container.push(...data.split(''));
     }
 
     dequeue() {

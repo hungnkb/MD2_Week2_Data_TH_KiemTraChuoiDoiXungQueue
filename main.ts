@@ -1,26 +1,28 @@
 import { Queue } from "./Queue";
 import { Stack } from "./Stack";
 
-let stack = new Stack;
+let stack: any = new Stack;
 let queue = new Queue;
 
-stack.container.push('able was');
-stack.container.push('ere');
-stack.container.push('saw elba');
+let words: any = "ablewas / ere / sawelba"
 
-queue.container.push('able was');
-queue.container.push('ere');
-queue.container.push('saw elba');
+stack.push(words)
+queue.enqueue(words)
 
-let checkTimes = queue.size()
-for (let i = 0; i < checkTimes; i++) {
-    if (stack.pop() == queue.dequeue()) {
-        console.log('Reflection') 
+let checktimes = stack.size()
+let counts = 0
+while(counts < checktimes) {
+    if (stack.pop() !== queue.dequeue()) {
+        console.log('No Reflection')
+        break;
     }
     else {
-        console.log('No Reflection')
+        console.log('Reflection')
     }
+    counts++
 }
+
+
 
 
 
